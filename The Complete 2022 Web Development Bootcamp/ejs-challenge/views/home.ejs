@@ -1,0 +1,15 @@
+
+<%- include partials/header %>
+
+<h1>Home</h1>
+
+<p> <%= startingContent %> 
+    <a href="http://localhost:3000/compose">Compose new article . .</a> </p>
+
+<% posts.forEach(function(post){ %> 
+    <h1><%= post.title %></h1>
+    <p><%= post.content.substring(0, 100) + ".." %><a href="http://localhost:3000/posts/<%= post.title %>">Read More</a></p>
+    
+<% }); %> 
+
+<%- include partials/footer %>
